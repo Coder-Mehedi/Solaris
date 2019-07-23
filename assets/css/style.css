@@ -1,0 +1,122 @@
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+address,
+p,
+input,
+button,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: 'Encode Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.menu-and-banner {
+  background: url("../images/banner-bg.jpg") no-repeat;
+  background-size: cover;
+  min-height: 807px;
+  height: 600px;
+}
+
+.menu-and-banner .menu .hamburger {
+  margin-left: 34px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menu-and-banner .menu .hamburger img {
+  padding-right: 10px;
+}
+
+.menu-and-banner .menu h1 {
+  font-family: 'Encode Sans';
+  font-weight: 700;
+  color: #3a3d44;
+  font-size: 19px;
+  line-height: 80px;
+  display: inline;
+}
+
+.menu-and-banner .banner {
+  padding-left: 189px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.menu-and-banner .banner .banner-text {
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  color: #fff;
+  font-size: 56px;
+  line-height: 76px;
+  max-width: 531px;
+}
+
+.clickable-icon {
+  width: 17px;
+  text-align: center;
+  position: fixed;
+  top: 165px;
+  right: 34px;
+}
+
+.section-heading {
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 57.96px;
+  color: #fff;
+  padding-top: 89px;
+  padding-bottom: 104px;
+  text-align: center;
+}
+
+.text p {
+  font-family: 'Source Sans Pro';
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.about-us {
+  background: url("../images/about-bg.jpg");
+  min-height: 782px;
+}
+
+.about-us .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 99px;
+}
+
+.about-us .details .text {
+  max-width: 541px;
+  padding-right: 157px;
+}
+
+.about-us .details .text p {
+  padding-bottom: 73px;
+}
+
+.core-value {
+  min-height: 909px;
+  background: #1b1d20;
+}
+/*# sourceMappingURL=style.css.map */
