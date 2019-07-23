@@ -119,4 +119,32 @@ body {
   min-height: 909px;
   background: #1b1d20;
 }
+
+.core-value .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 176px;
+}
+
+.core-value .details .text {
+  max-width: 397px;
+  padding-right: 145px;
+}
+
+.core-value .details .text h2 {
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  padding-bottom: 42px;
+  font-size: 24px;
+  line-height: 22px;
+}
+
+.core-value .details .text p {
+  padding-bottom: 35px;
+}
+
+.clients {
+  background: url("../images/background.jpg");
+}
 /*# sourceMappingURL=style.css.map */
