@@ -105,17 +105,78 @@ body {
         padding-left: 99px;
         .text {
             max-width: 541px;
-            padding-right: 157px;
+            padding-right: 152px;
             p {
                 padding-bottom: 73px;
             }
         }
     }
+    .opportunities {
+        position: relative;
+        height: 410px;
+        img.cross {
+            position: static;
+        }
+        img {
+            position: absolute;
+        }
+        .brand-builder {
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+        }
+        .bulb {
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .well-organized {
+            top: 50%;
+            right: 0%;
+            transform: translateY(-50%);
+        }
+        .content-creator {
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+nav a.text-active {
+    color: #fff;
 }
 
 .core-value {
     min-height: 909px;
     background: #1b1d20;
+    .menu {}
+    nav {
+        display: flex;
+        max-width: 1076px;
+        margin-bottom: 111px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a {
+        font-family: 'Source Sans Pro';
+        flex: 1;
+        text-decoration: none;
+        color: #494a4d;
+        text-align: center;
+        border: 1px solid #333639;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: none;
+        &:first-child {
+            border-left: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
     .details {
         display: flex;
         padding-left: 176px;
@@ -296,4 +357,30 @@ footer {
             color: #6e7680;
         }
     }
+}
+
+:hover {
+    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+    background-position: 0%;
+}
+
+//   effects
+$main-color: #fff;
+$secondary-color: #fe5f55;
+.section-heading p {
+    display: inline-block;
+    font: 300 42px/1.5 "Helvetica Neue", sans-serif;
+    margin-left: 80px;
+    color: $main-color;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient( to right, $secondary-color, $secondary-color 50%, $main-color 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+}
+
+.section-heading p:hover {
+    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+    background-position: 0%;
 }
