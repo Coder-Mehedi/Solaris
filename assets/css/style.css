@@ -75,6 +75,7 @@ body {
   position: fixed;
   top: 165px;
   right: 34px;
+  z-index: 1;
 }
 
 .section-heading {
@@ -144,7 +145,245 @@ body {
   padding-bottom: 35px;
 }
 
+.pt-0 {
+  padding-top: 0;
+}
+
+hr {
+  background: #56595c;
+  height: 1px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .clients {
   background: url("../images/background.jpg");
+  min-height: 1148px;
+  position: relative;
+}
+
+.clients .section-heading {
+  font-size: 32.94px;
+  line-height: 61.9px;
+  padding-top: 79px;
+  padding-bottom: 84px;
+}
+
+.clients .all-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1048px;
+  margin: 0 auto;
+}
+
+.clients .all-company .single-company {
+  width: 190px;
+  height: 70px;
+  border-right: 1px solid #3c3f43;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clients hr.long {
+  width: 1175px;
+  margin: 73px auto 0;
+}
+
+.clients .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 177px;
+}
+
+.clients .text {
+  max-width: 397px;
+  line-height: 24px;
+  color: #b4b6ba;
+  padding-right: 122px;
+}
+
+.clients .text p {
+  padding-bottom: 33px;
+}
+
+.clients .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients .image .shape {
+  font-family: 'Encode Sans';
+  margin-right: 71px;
+}
+
+.clients .image .shape:last-child {
+  margin-right: 0px;
+}
+
+.clients .image .shape p.category {
+  text-align: center;
+  padding-top: 28px;
+}
+
+.clients .image .hexagon-shape {
+  background: url("../images/shape.png");
+  width: 124px;
+  height: 143px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+}
+
+.clients h1.start-project {
+  text-align: center;
+  font-family: 'Source Sans Pro';
+  font-size: 22px;
+  line-height: 62px;
+  font-weight: 300;
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.clients hr.short {
+  width: 80px;
+}
+
+.clients .membership-and-certificate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 190px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients .membership-and-certificate .membership {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients .membership-and-certificate .membership .lahore {
+  padding-right: 38px;
+}
+
+.clients .membership-and-certificate .accreditations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 93px;
+}
+
+.clients .membership-and-certificate .accreditations img {
+  padding-left: 35px;
+}
+
+.social {
+  background: #1b1d20;
+  min-height: 757px;
+}
+
+.social .section-heading {
+  font-size: 32.94px;
+  line-height: 61.9px;
+}
+
+.social .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.social .icons i {
+  font-size: 16.98px;
+  line-height: 101.19px;
+  color: #6e7680;
+}
+
+.social .icons i:hover {
+  color: #f67e7d;
+  font-size: 18px;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+footer {
+  min-height: 74px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("../images/banner-bg.jpg");
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p.footer-text {
+  color: #434850;
+  font-size: 15px;
+  line-height: 80px;
+}
+
+footer p.footer-text span {
+  color: #6e7680;
 }
 /*# sourceMappingURL=style.css.map */

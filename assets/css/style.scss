@@ -75,6 +75,7 @@ body {
     position: fixed;
     top: 165px;
     right: 34px;
+    z-index: 1;
 }
 
 .section-heading {
@@ -135,6 +136,164 @@ body {
     }
 }
 
+.pt-0 {
+    padding-top: 0;
+}
+
+hr {
+    background: #56595c;
+    height: 1px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    ;
+}
+
 .clients {
     background: url('../images/background.jpg');
+    min-height: 1148px;
+    position: relative;
+    .section-heading {
+        font-size: 32.94px;
+        line-height: 61.9px;
+        padding-top: 79px;
+        padding-bottom: 84px;
+    }
+    .all-company {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 1048px;
+        margin: 0 auto;
+        .single-company {
+            width: 190px;
+            height: 70px;
+            border-right: 1px solid #3c3f43;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    hr.long {
+        width: 1175px;
+        margin: 73px auto 0;
+    }
+    .details {
+        display: flex;
+        padding-left: 177px;
+    }
+    .text {
+        max-width: 397px;
+        line-height: 24px;
+        color: #b4b6ba;
+        padding-right: 122px;
+        p {
+            padding-bottom: 33px;
+        }
+    }
+    .image {
+        display: flex;
+        .shape {
+            font-family: 'Encode Sans';
+            margin-right: 71px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            p.category {
+                text-align: center;
+                padding-top: 28px;
+            }
+        }
+        .hexagon-shape {
+            background: url('../images/shape.png');
+            width: 124px;
+            height: 143px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-weight: 300;
+        }
+    }
+    h1.start-project {
+        text-align: center;
+        font-family: 'Source Sans Pro';
+        font-size: 22px;
+        line-height: 62px;
+        font-weight: 300;
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    hr.short {
+        width: 80px;
+    }
+    .membership-and-certificate {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 190px;
+        justify-content: space-between;
+        align-items: center;
+        .membership {
+            display: flex;
+            padding-left: 100px;
+            align-items: center;
+            .lahore {
+                padding-right: 38px;
+            }
+        }
+        .accreditations {
+            display: flex;
+            align-items: center;
+            padding-right: 93px;
+            img {
+                padding-left: 35px;
+            }
+        }
+    }
+}
+
+.social {
+    background: #1b1d20;
+    min-height: 757px;
+    .section-heading {
+        font-size: 32.94px;
+        line-height: 61.9px;
+    }
+    .details {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        i {
+            font-size: 16.98px;
+            line-height: 101.19px;
+            color: #6e7680;
+        }
+        i:hover {
+            color: #f67e7d;
+            font-size: 18px;
+            transition: .6s;
+        }
+    }
+}
+
+footer {
+    min-height: 74px;
+    display: flex;
+    background: url('../images/banner-bg.jpg');
+    justify-content: center;
+    align-items: center;
+    p.footer-text {
+        color: #434850;
+        font-size: 15px;
+        line-height: 80px;
+        span {
+            color: #6e7680;
+        }
+    }
 }
