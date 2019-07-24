@@ -26,8 +26,8 @@ body {
 .menu-and-banner {
   background: url("../images/banner-bg.jpg") no-repeat;
   background-size: cover;
-  min-height: 807px;
-  height: 600px;
+  background-position: 100%;
+  height: 100vh;
 }
 
 .menu-and-banner .menu .hamburger {
@@ -70,12 +70,60 @@ body {
 }
 
 .clickable-icon {
-  width: 17px;
-  text-align: center;
   position: fixed;
   top: 165px;
   right: 34px;
   z-index: 1;
+}
+
+.clickable-icon .circle.active {
+  background: #fff;
+}
+
+.clickable-icon .circle {
+  width: 17px;
+  height: 17px;
+  background: #535356;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.clickable-icon .circle::before {
+  content: '';
+  display: block;
+  background: #222528;
+  height: 11.5px;
+  width: 11.5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.clickable-icon .circle::after {
+  content: '';
+  display: block;
+  height: 38px;
+  background: #535356;
+  width: 3px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  cursor: default;
+}
+
+.clickable-icon .next-circle {
+  position: absolute;
+  top: 55px;
+}
+
+.clickable-icon .last-circle::after {
+  display: none;
 }
 
 .section-heading {
@@ -98,6 +146,13 @@ body {
 .about-us {
   background: url("../images/about-bg.jpg");
   min-height: 782px;
+}
+
+.about-us .section-heading p {
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 57.96px;
 }
 
 .about-us .details {
@@ -164,6 +219,13 @@ nav a.text-active {
 .core-value {
   min-height: 909px;
   background: #1b1d20;
+}
+
+.core-value .section-heading p {
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 57.96px;
 }
 
 .core-value nav {
@@ -243,16 +305,24 @@ hr {
 }
 
 .clients {
-  background: url("../images/background.jpg");
+  background: url("../images/background.jpg") no-repeat;
   min-height: 1148px;
   position: relative;
+  background-attachment: fixed;
+  background-position: 0%;
+  background-size: cover;
 }
 
 .clients .section-heading {
-  font-size: 32.94px;
-  line-height: 61.9px;
   padding-top: 79px;
   padding-bottom: 84px;
+}
+
+.clients .section-heading p {
+  font-size: 32.94px;
+  line-height: 61.9px;
+  font-family: 'Encode Sans';
+  font-weight: 500;
 }
 
 .clients .all-company {
@@ -375,6 +445,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #23262a;
 }
 
 .clients .membership-and-certificate .membership {
@@ -410,9 +481,21 @@ hr {
   min-height: 757px;
 }
 
-.social .section-heading {
+.social .section-heading p {
   font-size: 32.94px;
   line-height: 61.9px;
+  font-family: 'Encode Sans';
+  font-weight: 500;
+}
+
+.social .water-filter {
+  position: relative;
+  height: 210px;
+}
+
+.social .water-filter i.fab {
+  position: absolute;
+  bottom: 0;
 }
 
 .social .details {
@@ -449,6 +532,7 @@ hr {
 }
 
 footer {
+  font-family: 'Source Sans Pro';
   min-height: 74px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,8 +564,6 @@ footer p.footer-text span {
 
 .section-heading p {
   display: inline-block;
-  font: 300 42px/1.5 "Helvetica Neue", sans-serif;
-  margin-left: 80px;
   color: #fff;
   text-decoration: none;
   -webkit-background-clip: text;
@@ -493,6 +575,61 @@ footer p.footer-text span {
 }
 
 .section-heading p:hover {
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+.hamburger h1 {
+  display: inline-block;
+  color: #3a3d44;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #3a3d44));
+  background-image: linear-gradient(to right, #fff, #fff 50%, #3a3d44 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.hamburger h1:hover {
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+nav a {
+  display: inline-block;
+  color: #3a3d44;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #3a3d44));
+  background-image: linear-gradient(to right, #fff, #fff 50%, #3a3d44 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+nav a:hover {
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+nav a.text-active {
+  display: inherit !important;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(50%, #fff), color-stop(50%, #fff));
+  background-image: linear-gradient(to right, #fff, #fff 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+nav a.text-active:hover {
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;

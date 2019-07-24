@@ -25,9 +25,10 @@ body {
 .menu-and-banner {
     background: url('../images/banner-bg.jpg') no-repeat;
     background-size: cover;
+    background-position: 100%;
     // min-height: 100vh;
-    min-height: 807px; //as psd
-    height: 600px;
+    // min-height: 807px; //as psd
+    height: 100vh;
     .menu {
         .hamburger {
             margin-left: 34px;
@@ -69,13 +70,61 @@ body {
     }
 }
 
+// .clickable-icon {
+//     width: 17px;
+//     text-align: center;
+//     position: fixed;
+//     top: 165px;
+//     right: 34px;
+//     z-index: 1;
+// }
 .clickable-icon {
-    width: 17px;
-    text-align: center;
     position: fixed;
     top: 165px;
     right: 34px;
     z-index: 1;
+    .circle.active {
+        background: #fff;
+    }
+    .circle {
+        width: 17px;
+        height: 17px;
+        background: #535356;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: '';
+            display: block;
+            background: #222528;
+            height: 11.5px;
+            width: 11.5px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: '';
+            display: block;
+            height: 38px;
+            background: #535356;
+            width: 3px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: default;
+        }
+    }
+    .next-circle {
+        position: absolute;
+        top: 55px;
+    }
+    .last-circle::after {
+        display: none;
+    }
 }
 
 .section-heading {
@@ -100,6 +149,12 @@ body {
 .about-us {
     background: url('../images/about-bg.jpg');
     min-height: 782px;
+    .section-heading p {
+        font-family: 'Encode Sans';
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 57.96px;
+    }
     .details {
         display: flex;
         padding-left: 99px;
@@ -150,7 +205,14 @@ nav a.text-active {
 .core-value {
     min-height: 909px;
     background: #1b1d20;
-    .menu {}
+    .section-heading {
+        p {
+            font-family: 'Encode Sans';
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 57.96px;
+        }
+    }
     nav {
         display: flex;
         max-width: 1076px;
@@ -211,14 +273,21 @@ hr {
 }
 
 .clients {
-    background: url('../images/background.jpg');
+    background: url('../images/background.jpg') no-repeat;
     min-height: 1148px;
     position: relative;
+    background-attachment: fixed;
+    background-position: 0%;
+    background-size: cover;
     .section-heading {
-        font-size: 32.94px;
-        line-height: 61.9px;
         padding-top: 79px;
         padding-bottom: 84px;
+        p {
+            font-size: 32.94px;
+            line-height: 61.9px;
+            font-family: 'Encode Sans';
+            font-weight: 500;
+        }
     }
     .all-company {
         display: flex;
@@ -296,6 +365,7 @@ hr {
         height: 190px;
         justify-content: space-between;
         align-items: center;
+        background: #23262a;
         .membership {
             display: flex;
             padding-left: 100px;
@@ -318,9 +388,20 @@ hr {
 .social {
     background: #1b1d20;
     min-height: 757px;
-    .section-heading {
+    .section-heading p {
         font-size: 32.94px;
         line-height: 61.9px;
+        font-family: 'Encode Sans';
+        font-weight: 500;
+    }
+    .water-filter {
+        position: relative;
+        height: 210px;
+        i.fab {
+            position: absolute;
+            bottom: 0;
+        }
+        i.fb {}
     }
     .details {
         display: flex;
@@ -344,6 +425,7 @@ hr {
 }
 
 footer {
+    font-family: 'Source Sans Pro';
     min-height: 74px;
     display: flex;
     background: url('../images/banner-bg.jpg');
@@ -367,10 +449,11 @@ footer {
 //   effects
 $main-color: #fff;
 $secondary-color: #fe5f55;
-.section-heading p {
+// mixins
+@mixin text-hover($main-color: #fff,
+$secondary-color: #fe5f55) {
     display: inline-block;
-    font: 300 42px/1.5 "Helvetica Neue", sans-serif;
-    margin-left: 80px;
+    // font: 300 42px/1.5 "Helvetica Neue", sans-serif;
     color: $main-color;
     text-decoration: none;
     -webkit-background-clip: text;
@@ -378,9 +461,28 @@ $secondary-color: #fe5f55;
     background-image: linear-gradient( to right, $secondary-color, $secondary-color 50%, $main-color 50%);
     background-size: 200% 100%;
     background-position: 100%;
+    &:hover {
+        transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+        background-position: 0%;
+    }
 }
 
-.section-heading p:hover {
-    transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
-    background-position: 0%;
+.section-heading p {
+    @include text-hover();
+}
+
+.hamburger h1 {
+    @include text-hover(#3a3d44,
+    #fff);
+}
+
+nav a {
+    @include text-hover(#3a3d44,
+    #fff);
+}
+
+nav a.text-active {
+    display: inherit !important;
+    @include text-hover(#fff,
+    #fff);
 }
