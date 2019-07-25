@@ -23,11 +23,26 @@ body {
   color: #fff;
 }
 
+.show-nav {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .menu-and-banner {
   background: url("../images/banner-bg.jpg") no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: left;
   height: 100vh;
+}
+
+.menu-and-banner .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-and-banner .menu .hamburger {
@@ -36,8 +51,64 @@ body {
   display: inline-block;
 }
 
-.menu-and-banner .menu .hamburger img {
-  padding-right: 10px;
+.menu-and-banner .menu .hamburger nav.main-nav {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background: black;
+  left: 0%;
+  top: 0%;
+  z-index: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.menu-and-banner .menu .hamburger nav.main-nav a {
+  font-family: 'Source Sans Pro';
+  color: #fff;
+  font-size: 70px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu-and-banner .menu .hamburger nav.main-nav span {
+  font-size: 80px;
+  position: absolute;
+  left: 3%;
+  top: 0%;
+}
+
+.menu-and-banner .menu .hamburger nav.main-nav span:hover {
+  color: #dd3131;
+}
+
+.menu-and-banner .menu .hamburger i.fas {
+  font-size: 19px;
+  color: #6e7680;
+  width: 27px;
+}
+
+.menu-and-banner .menu .site-title {
+  margin-right: 41px;
+}
+
+.menu-and-banner .menu .site-title h1 {
+  font-weight: 500;
+  color: #6e7680;
+  font-size: 15px;
+  line-height: 80px;
 }
 
 .menu-and-banner .menu h1 {
@@ -69,11 +140,74 @@ body {
   max-width: 531px;
 }
 
+.menu-and-banner .animation-container .thumbs-up {
+  position: absolute;
+  -webkit-animation: rocket 3s ease-in-out forwards;
+          animation: rocket 3s ease-in-out forwards;
+}
+
+.menu-and-banner .animation-container .thumbs-up .hand {
+  position: absolute;
+  top: 29%;
+  left: 38%;
+  opacity: 0;
+  -webkit-animation: like 1s 3s ease-in-out forwards;
+          animation: like 1s 3s ease-in-out forwards;
+}
+
+@-webkit-keyframes like {
+  0% {
+    top: 20%;
+    left: 29%;
+    opacity: 0;
+  }
+  100% {
+    top: 29%;
+    left: 38%;
+    opacity: 1;
+  }
+}
+
+@keyframes like {
+  0% {
+    top: 20%;
+    left: 29%;
+    opacity: 0;
+  }
+  100% {
+    top: 29%;
+    left: 38%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rocket {
+  0% {
+    right: 42%;
+    bottom: -24%;
+  }
+  100% {
+    right: 13%;
+    bottom: 19%;
+  }
+}
+
+@keyframes rocket {
+  0% {
+    right: 42%;
+    bottom: -24%;
+  }
+  100% {
+    right: 13%;
+    bottom: 19%;
+  }
+}
+
 .clickable-icon {
   position: fixed;
-  top: 165px;
-  right: 34px;
-  z-index: 1;
+  top: 40%;
+  right: 3%;
+  z-index: 5;
 }
 
 .clickable-icon .circle.active {
@@ -161,6 +295,8 @@ body {
 .about-us {
   background: #23262a;
   min-height: 782px;
+  position: relative;
+  z-index: 1;
 }
 
 .about-us .section-heading p {
@@ -189,6 +325,7 @@ body {
 .about-us .opportunities {
   position: relative;
   height: 410px;
+  top: 35px;
 }
 
 .about-us .opportunities img.cross {
@@ -279,11 +416,17 @@ body {
           align-items: center;
 }
 
-.about-us p {
+.about-us .opportunities p {
   font-family: 'Encode Sans';
   font-size: 17.53px;
   line-height: 26.97px;
   margin-top: 28px;
+}
+
+.about-us p {
+  font-family: 'Source Sans Pro';
+  font-size: 17px;
+  line-height: 22px;
 }
 
 nav h6.text-active {
@@ -369,13 +512,13 @@ nav h6.text-active::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 176px;
+  padding-left: 150px;
   display: none;
 }
 
 .core-value .details .text {
   max-width: 397px;
-  padding-right: 145px;
+  padding-right: 110px;
 }
 
 .core-value .details .text h2 {
@@ -450,6 +593,10 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.clients .all-company .single-company:last-child {
+  border-right: none;
 }
 
 .clients hr.long {
@@ -574,6 +721,20 @@ hr {
   padding-left: 35px;
 }
 
+@-webkit-keyframes bubble {
+  100% {
+    bottom: 91%;
+    opacity: .2;
+  }
+}
+
+@keyframes bubble {
+  100% {
+    bottom: 91%;
+    opacity: .2;
+  }
+}
+
 .social {
   background: #1b1d20;
   min-height: 757px;
@@ -588,11 +749,62 @@ hr {
 
 .social .water-filter {
   position: relative;
+  bottom: 50px;
 }
 
 .social .water-filter i.fab {
   position: absolute;
-  bottom: 0;
+}
+
+.social .water-filter i.fb {
+  bottom: 40%;
+  left: 25%;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 4px;
+  height: 13px;
+  -webkit-animation: bubble 4s 0s ease-in infinite;
+          animation: bubble 4s 0s ease-in infinite;
+}
+
+.social .water-filter i.vimeo {
+  bottom: 40%;
+  left: 43%;
+  padding: 2px;
+  border-radius: 50%;
+  border: 3px solid white;
+  -webkit-animation: bubble 3s .5s ease-in infinite;
+          animation: bubble 3s .5s ease-in infinite;
+}
+
+.social .water-filter i.apple {
+  bottom: 40%;
+  left: 60%;
+  padding: 3px;
+  border-radius: 50%;
+  border: 3px solid white;
+  -webkit-animation: bubble 3s 1s ease-in-out infinite;
+          animation: bubble 3s 1s ease-in-out infinite;
+}
+
+.social .water-filter i.android {
+  bottom: 44%;
+  left: 10%;
+  padding: 3px;
+  border-radius: 50%;
+  border: 3px solid white;
+  -webkit-animation: bubble 2.5s .7s ease-in infinite;
+          animation: bubble 2.5s .7s ease-in infinite;
+}
+
+.social .water-filter i.windows {
+  bottom: 43%;
+  left: 74%;
+  padding: 3px;
+  border-radius: 50%;
+  border: 3px solid white;
+  -webkit-animation: bubble 3.5s 1.3s ease-in infinite;
+          animation: bubble 3.5s 1.3s ease-in infinite;
 }
 
 .social .details {
@@ -672,8 +884,8 @@ footer p.footer-text span {
 }
 
 .section-heading p:hover {
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;
 }
 
@@ -690,8 +902,8 @@ footer p.footer-text span {
 }
 
 .hamburger h1:hover {
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;
 }
 
@@ -708,8 +920,8 @@ nav h6 {
 }
 
 nav h6:hover {
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;
 }
 
@@ -727,8 +939,44 @@ nav h6.text-active {
 }
 
 nav h6.text-active:hover {
-  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
-  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+.opportunities p {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#79ed0c), color-stop(50%, #79ed0c), color-stop(50%, #fff));
+  background-image: linear-gradient(to right, #79ed0c, #79ed0c 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.opportunities p:hover {
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+nav.main-nav a {
+  display: inline-block;
+  color: #6d757f;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, white), color-stop(50%, #6d757f));
+  background-image: linear-gradient(to right, white, white 50%, #6d757f 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+nav.main-nav a:hover {
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;
 }
 /*# sourceMappingURL=style.css.map */

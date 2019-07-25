@@ -4,6 +4,16 @@ $(() => {
         $(this).addClass('text-active').siblings().removeClass('text-active');
 
     });
+
+    // Menu toggle
+
+    $('.hamburger').on('click', () => {
+        $('nav.main-nav').toggleClass('show-nav');
+        // alert('clickked');
+    })
+
+
+
     $('.one').on('click', function() {
         $('#one').siblings().hide();
         $('#one').css('display', 'flex')

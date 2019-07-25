@@ -22,21 +22,73 @@ body {
     color: #fff;
 }
 
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-nav {
+    display: flex !important;
+}
+
 .menu-and-banner {
     background: url('../images/banner-bg.jpg') no-repeat;
     background-size: cover;
-    background-position: 100%;
+    // background-position: 100%;
+    background-position: left;
     // min-height: 100vh;
     // min-height: 807px; //as psd
     height: 100vh;
     .menu {
+        display: flex;
+        justify-content: space-between;
         .hamburger {
             margin-left: 34px;
             cursor: pointer;
             display: inline-block;
-            img {
-                // margin: 33px 10px 0px 34px;
-                padding-right: 10px;
+            nav.main-nav {
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                background: black;
+                left: 0%;
+                top: 0%;
+                z-index: 6;
+                @include center();
+                display: none;
+                a {
+                    // font-family: 'Encode Sans';
+                    font-family: 'Source Sans Pro';
+                    color: #fff;
+                    font-size: 70px;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+                span {
+                    font-size: 80px;
+                    position: absolute;
+                    left: 3%;
+                    top: 0%;
+                    &:hover {
+                        color: hsl(0, 72%, 53%)
+                    }
+                }
+            }
+            i.fas {
+                font-size: 19px;
+                color: #6e7680;
+                width: 27px;
+            }
+        }
+        .site-title {
+            margin-right: 41px;
+            h1 {
+                font-weight: 500;
+                color: #6e7680;
+                font-size: 15px;
+                line-height: 80px;
             }
         }
         h1 {
@@ -65,8 +117,40 @@ body {
     }
     .animation-container {
         .thumbs-up {
-            img {}
+            position: absolute;
+            animation: rocket 3s ease-in-out forwards;
+            .hand {
+                position: absolute;
+                top: 29%;
+                left: 38%;
+                opacity: 0;
+                animation: like 1s 3s ease-in-out forwards;
+            }
         }
+    }
+}
+
+@keyframes like {
+    0% {
+        top: 20%;
+        left: 29%;
+        opacity: 0;
+    }
+    100% {
+        top: 29%;
+        left: 38%;
+        opacity: 1;
+    }
+}
+
+@keyframes rocket {
+    0% {
+        right: 42%;
+        bottom: -24%;
+    }
+    100% {
+        right: 13%;
+        bottom: 19%;
     }
 }
 
@@ -80,9 +164,9 @@ body {
 // }
 .clickable-icon {
     position: fixed;
-    top: 165px;
-    right: 34px;
-    z-index: 1;
+    top: 40%;
+    right: 3%;
+    z-index: 5;
     .circle.active {
         background: #fff;
     }
@@ -161,6 +245,8 @@ body {
 .about-us {
     background: #23262a;
     min-height: 782px;
+    position: relative;
+    z-index: 1;
     .section-heading p {
         font-family: 'Encode Sans';
         font-weight: 500;
@@ -178,15 +264,10 @@ body {
             }
         }
     }
-    @mixin center {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
     .opportunities {
         position: relative;
         height: 410px;
+        top: 35px;
         img.cross {
             position: static;
         }
@@ -218,12 +299,17 @@ body {
             transform: translateX(-50%);
             @include center;
         }
+        p {
+            font-family: 'Encode Sans';
+            font-size: 17.53px;
+            line-height: 26.97px;
+            margin-top: 28px;
+        }
     }
     p {
-        font-family: 'Encode Sans';
-        font-size: 17.53px;
-        line-height: 26.97px;
-        margin-top: 28px;
+        font-family: 'Source Sans Pro';
+        font-size: 17px;
+        line-height: 22px;
     }
 }
 
@@ -289,11 +375,11 @@ nav h6.text-active {
     }
     .details {
         display: flex;
-        padding-left: 176px;
+        padding-left: 150px;
         display: none;
         .text {
             max-width: 397px;
-            padding-right: 145px;
+            padding-right: 110px;
             h2 {
                 font-family: 'Encode Sans';
                 font-weight: 500;
@@ -351,6 +437,9 @@ hr {
             display: flex;
             align-items: center;
             justify-content: center;
+            &:last-child {
+                border-right: none;
+            }
         }
     }
     hr.long {
@@ -434,6 +523,13 @@ hr {
     }
 }
 
+@keyframes bubble {
+    100% {
+        bottom: 91%;
+        opacity: .2;
+    }
+}
+
 .social {
     background: #1b1d20;
     min-height: 757px;
@@ -445,12 +541,53 @@ hr {
     }
     .water-filter {
         position: relative;
+        bottom: 50px;
         // height: 210px;
         i.fab {
             position: absolute;
-            bottom: 0;
         }
-        i.fb {}
+        i.fb {
+            // transition: all 10s;
+            bottom: 40%;
+            left: 25%;
+            border-radius: 50%;
+            border: 3px solid white;
+            padding: 4px;
+            height: 13px;
+            animation: bubble 4s 0s ease-in infinite;
+        }
+        i.vimeo {
+            bottom: 40%;
+            left: 43%;
+            padding: 2px;
+            border-radius: 50%;
+            border: 3px solid white;
+            animation: bubble 3s .5s ease-in infinite;
+        }
+        i.apple {
+            bottom: 40%;
+            left: 60%;
+            padding: 3px;
+            border-radius: 50%;
+            border: 3px solid white;
+            animation: bubble 3s 1s ease-in-out infinite;
+        }
+        i.android {
+            bottom: 44%;
+            left: 10%;
+            padding: 3px;
+            border-radius: 50%;
+            border: 3px solid white;
+            animation: bubble 2.5s .7s ease-in infinite;
+        }
+        i.windows {
+            bottom: 43%;
+            left: 74%;
+            padding: 3px;
+            border-radius: 50%;
+            border: 3px solid white;
+            animation: bubble 3.5s 1.3s ease-in infinite;
+        }
     }
     .details {
         display: flex;
@@ -510,7 +647,7 @@ $secondary-color: #fe5f55) {
     background-size: 200% 100%;
     background-position: 100%;
     &:hover {
-        transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+        transition: all .8s cubic-bezier(0.000, 0.000, 0.230, 1);
         background-position: 0%;
     }
 }
@@ -533,4 +670,16 @@ nav h6.text-active {
     display: inherit !important;
     @include text-hover(#fff,
     #fff);
+}
+
+.opportunities p {
+    @include text-hover(#fff,
+    hsl(91,
+    90%,
+    49%))
+}
+
+nav.main-nav a {
+    @include text-hover(#6d757f,
+    white)
 }
