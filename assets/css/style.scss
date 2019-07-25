@@ -52,7 +52,7 @@ body {
                 height: 100vh;
                 width: 100%;
                 position: absolute;
-                background: black;
+                background: #23262a;
                 left: 0%;
                 top: 0%;
                 z-index: 6;
@@ -61,7 +61,6 @@ body {
                 a {
                     // font-family: 'Encode Sans';
                     font-family: 'Source Sans Pro';
-                    color: #fff;
                     font-size: 70px;
                     text-decoration: none;
                     font-weight: 700;
@@ -71,9 +70,6 @@ body {
                     position: absolute;
                     left: 3%;
                     top: 0%;
-                    &:hover {
-                        color: hsl(0, 72%, 53%)
-                    }
                 }
             }
             i.fas {
@@ -680,6 +676,11 @@ nav h6.text-active {
 }
 
 nav.main-nav a {
+    @include text-hover(#6d757f,
+    white)
+}
+
+nav.main-nav span {
     @include text-hover(#6d757f,
     white)
 }

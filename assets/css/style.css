@@ -55,7 +55,7 @@ body {
   height: 100vh;
   width: 100%;
   position: absolute;
-  background: black;
+  background: #23262a;
   left: 0%;
   top: 0%;
   z-index: 6;
@@ -77,7 +77,6 @@ body {
 
 .menu-and-banner .menu .hamburger nav.main-nav a {
   font-family: 'Source Sans Pro';
-  color: #fff;
   font-size: 70px;
   text-decoration: none;
   font-weight: 700;
@@ -88,10 +87,6 @@ body {
   position: absolute;
   left: 3%;
   top: 0%;
-}
-
-.menu-and-banner .menu .hamburger nav.main-nav span:hover {
-  color: #dd3131;
 }
 
 .menu-and-banner .menu .hamburger i.fas {
@@ -975,6 +970,24 @@ nav.main-nav a {
 }
 
 nav.main-nav a:hover {
+  -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+nav.main-nav span {
+  display: inline-block;
+  color: #6d757f;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, white), color-stop(50%, #6d757f));
+  background-image: linear-gradient(to right, white, white 50%, #6d757f 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+nav.main-nav span:hover {
   -webkit-transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   transition: all 0.8s cubic-bezier(0, 0, 0.23, 1);
   background-position: 0%;
