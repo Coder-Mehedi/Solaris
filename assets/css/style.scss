@@ -254,7 +254,7 @@ body {
         padding-left: 99px;
         .text {
             max-width: 541px;
-            padding-right: 152px;
+            padding-right: 120px;
             p {
                 padding-bottom: 73px;
             }
@@ -450,7 +450,7 @@ hr {
         max-width: 397px;
         line-height: 24px;
         color: #b4b6ba;
-        padding-right: 122px;
+        padding-right: 100px;
         p {
             padding-bottom: 33px;
         }
@@ -500,18 +500,40 @@ hr {
         justify-content: space-between;
         align-items: center;
         background: #23262a;
+        * {
+            margin-top: 10px;
+        }
         .membership {
+            position: relative;
             display: flex;
             padding-left: 100px;
             align-items: center;
+            h3 {
+                position: absolute;
+                top: -41%;
+                font-family: 'Encode Sans';
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 61.9px;
+            }
             .lahore {
                 padding-right: 38px;
             }
         }
         .accreditations {
+            position: relative;
             display: flex;
             align-items: center;
             padding-right: 93px;
+            h3 {
+                position: absolute;
+                top: -68%;
+                left: 4.5%;
+                font-family: 'Encode Sans';
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 61.9px;
+            }
             img {
                 padding-left: 35px;
             }
@@ -610,7 +632,7 @@ footer {
     font-family: 'Source Sans Pro';
     min-height: 74px;
     display: flex;
-    background: url('../images/banner-bg.jpg');
+    background: url('../images/footer-bg.png');
     justify-content: center;
     align-items: center;
     p.footer-text {

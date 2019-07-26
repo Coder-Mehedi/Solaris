@@ -310,7 +310,7 @@ body {
 
 .about-us .details .text {
   max-width: 541px;
-  padding-right: 152px;
+  padding-right: 120px;
 }
 
 .about-us .details .text p {
@@ -610,7 +610,7 @@ hr {
   max-width: 397px;
   line-height: 24px;
   color: #b4b6ba;
-  padding-right: 122px;
+  padding-right: 100px;
 }
 
 .clients .text p {
@@ -688,7 +688,12 @@ hr {
   background: #23262a;
 }
 
+.clients .membership-and-certificate * {
+  margin-top: 10px;
+}
+
 .clients .membership-and-certificate .membership {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,11 +703,21 @@ hr {
           align-items: center;
 }
 
+.clients .membership-and-certificate .membership h3 {
+  position: absolute;
+  top: -41%;
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 61.9px;
+}
+
 .clients .membership-and-certificate .membership .lahore {
   padding-right: 38px;
 }
 
 .clients .membership-and-certificate .accreditations {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -710,6 +725,16 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   padding-right: 93px;
+}
+
+.clients .membership-and-certificate .accreditations h3 {
+  position: absolute;
+  top: -68%;
+  left: 4.5%;
+  font-family: 'Encode Sans';
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 61.9px;
 }
 
 .clients .membership-and-certificate .accreditations img {
@@ -841,7 +866,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../images/banner-bg.jpg");
+  background: url("../images/footer-bg.png");
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
