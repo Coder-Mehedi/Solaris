@@ -1,3 +1,4 @@
+@import 'fonts';
 *,
 h1,
 h2,
@@ -542,6 +543,12 @@ hr {
 }
 
 @keyframes bubble {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
     100% {
         bottom: 91%;
         opacity: .2;
@@ -563,48 +570,59 @@ hr {
         // height: 210px;
         i.fab {
             position: absolute;
+            color: white;
+            border-radius: 50%;
         }
         i.fb {
-            // transition: all 10s;
             bottom: 40%;
             left: 25%;
-            border-radius: 50%;
             border: 3px solid white;
             padding: 4px;
             height: 13px;
             animation: bubble 4s 0s ease-in infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
         i.vimeo {
             bottom: 40%;
             left: 43%;
             padding: 2px;
-            border-radius: 50%;
             border: 3px solid white;
             animation: bubble 3s .5s ease-in infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
         i.apple {
             bottom: 40%;
             left: 60%;
             padding: 3px;
-            border-radius: 50%;
             border: 3px solid white;
             animation: bubble 3s 1s ease-in-out infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
         i.android {
             bottom: 44%;
             left: 10%;
             padding: 3px;
-            border-radius: 50%;
             border: 3px solid white;
             animation: bubble 2.5s .7s ease-in infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
         i.windows {
             bottom: 43%;
             left: 74%;
             padding: 3px;
-            border-radius: 50%;
             border: 3px solid white;
             animation: bubble 3.5s 1.3s ease-in infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
     }
     .details {
@@ -705,4 +723,17 @@ nav.main-nav a {
 nav.main-nav span {
     @include text-hover(#6d757f,
     white)
+}
+
+@mixin mQ($arg...) {
+    @if length($arg)==1 {
+        @media screen and (max-width: nth($arg, 1)) {
+            @content;
+        }
+    }
+    @if length($arg)==2 {
+        @media screen and (max-width: nth($arg, 1) and (min-width: nth($arg, 2))) {
+            @content;
+        }
+    }
 }

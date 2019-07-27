@@ -1,3 +1,80 @@
+/* encode-sans-300 - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Encode-Sans/encode-sans-v4-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Encode Sans Light"), local("EncodeSans-Light"), url("../fonts/Encode-Sans/encode-sans-v4-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-300.woff2") format("woff2"), url("../fonts/Encode-Sans/encode-sans-v4-latin-300.woff") format("woff"), url("../fonts/Encode-Sans/encode-sans-v4-latin-300.ttf") format("truetype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-300.svg#EncodeSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* encode-sans-600 - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Encode-Sans/encode-sans-v4-latin-600.eot");
+  /* IE9 Compat Modes */
+  src: local("Encode Sans SemiBold"), local("EncodeSans-SemiBold"), url("../fonts/Encode-Sans/encode-sans-v4-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-600.woff2") format("woff2"), url("../fonts/Encode-Sans/encode-sans-v4-latin-600.woff") format("woff"), url("../fonts/Encode-Sans/encode-sans-v4-latin-600.ttf") format("truetype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-600.svg#EncodeSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* encode-sans-regular - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Encode Sans Regular"), local("EncodeSans-Regular"), url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.woff2") format("woff2"), url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.woff") format("woff"), url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.ttf") format("truetype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-regular.svg#EncodeSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* encode-sans-500 - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Encode-Sans/encode-sans-v4-latin-500.eot");
+  /* IE9 Compat Modes */
+  src: local("Encode Sans Medium"), local("EncodeSans-Medium"), url("../fonts/Encode-Sans/encode-sans-v4-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-500.woff2") format("woff2"), url("../fonts/Encode-Sans/encode-sans-v4-latin-500.woff") format("woff"), url("../fonts/Encode-Sans/encode-sans-v4-latin-500.ttf") format("truetype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-500.svg#EncodeSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* encode-sans-700 - latin */
+@font-face {
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Encode-Sans/encode-sans-v4-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Encode Sans Bold"), local("EncodeSans-Bold"), url("../fonts/Encode-Sans/encode-sans-v4-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-700.woff2") format("woff2"), url("../fonts/Encode-Sans/encode-sans-v4-latin-700.woff") format("woff"), url("../fonts/Encode-Sans/encode-sans-v4-latin-700.ttf") format("truetype"), url("../fonts/Encode-Sans/encode-sans-v4-latin-700.svg#EncodeSans") format("svg");
+  /* Legacy iOS */
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Source Sans Pro Light"), local("SourceSansPro-Light"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.woff2") format("woff2"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.woff") format("woff"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.ttf") format("truetype"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-300.svg#SourceSansPro") format("svg");
+  /* Legacy iOS */
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.woff2") format("woff2"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.woff") format("woff"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.ttf") format("truetype"), url("../fonts/Source-Sans-Pro/source-sans-pro-v13-latin-regular.svg#SourceSansPro") format("svg");
+  /* Legacy iOS */
+}
+
 *,
 h1,
 h2,
@@ -742,6 +819,12 @@ hr {
 }
 
 @-webkit-keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
   100% {
     bottom: 91%;
     opacity: .2;
@@ -749,6 +832,12 @@ hr {
 }
 
 @keyframes bubble {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
   100% {
     bottom: 91%;
     opacity: .2;
@@ -774,12 +863,13 @@ hr {
 
 .social .water-filter i.fab {
   position: absolute;
+  color: white;
+  border-radius: 50%;
 }
 
 .social .water-filter i.fb {
   bottom: 40%;
   left: 25%;
-  border-radius: 50%;
   border: 3px solid white;
   padding: 4px;
   height: 13px;
@@ -787,44 +877,65 @@ hr {
           animation: bubble 4s 0s ease-in infinite;
 }
 
+.social .water-filter i.fb:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .social .water-filter i.vimeo {
   bottom: 40%;
   left: 43%;
   padding: 2px;
-  border-radius: 50%;
   border: 3px solid white;
   -webkit-animation: bubble 3s .5s ease-in infinite;
           animation: bubble 3s .5s ease-in infinite;
+}
+
+.social .water-filter i.vimeo:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .social .water-filter i.apple {
   bottom: 40%;
   left: 60%;
   padding: 3px;
-  border-radius: 50%;
   border: 3px solid white;
   -webkit-animation: bubble 3s 1s ease-in-out infinite;
           animation: bubble 3s 1s ease-in-out infinite;
+}
+
+.social .water-filter i.apple:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .social .water-filter i.android {
   bottom: 44%;
   left: 10%;
   padding: 3px;
-  border-radius: 50%;
   border: 3px solid white;
   -webkit-animation: bubble 2.5s .7s ease-in infinite;
           animation: bubble 2.5s .7s ease-in infinite;
+}
+
+.social .water-filter i.android:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .social .water-filter i.windows {
   bottom: 43%;
   left: 74%;
   padding: 3px;
-  border-radius: 50%;
   border: 3px solid white;
   -webkit-animation: bubble 3.5s 1.3s ease-in infinite;
           animation: bubble 3.5s 1.3s ease-in infinite;
+}
+
+.social .water-filter i.windows:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .social .details {
