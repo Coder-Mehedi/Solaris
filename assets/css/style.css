@@ -282,10 +282,6 @@ body {
   }
 }
 
-.menu-and-banner .animation-container {
-  width: 100%;
-}
-
 .menu-and-banner .animation-container .thumbs-up {
   position: absolute;
   -webkit-animation: rocket 3s ease-in-out forwards;
@@ -907,7 +903,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1048px;
+  width: 1146px;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

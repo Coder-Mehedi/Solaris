@@ -169,7 +169,7 @@ body {
         }
     }
     .animation-container {
-        width: 100%;
+        // width: 100%;
         @include mQ(480px,
         320px) {
             // position: relative;
@@ -613,7 +613,7 @@ hr {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 1048px;
+        width: 1146px;
         margin: 0 auto;
         flex-wrap: wrap;
         @include mQ(480px,
