@@ -30,6 +30,19 @@ body {
     align-items: center;
 }
 
+@mixin mQ($arg...) {
+    @if length($arg)==1 {
+        @media screen and (max-width: nth($arg, 1)) {
+            @content;
+        }
+    }
+    @if length($arg)==2 {
+        @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
+            @content;
+        }
+    }
+}
+
 .show-nav {
     display: flex !important;
 }
@@ -42,6 +55,10 @@ body {
     // min-height: 100vh;
     // min-height: 807px; //as psd
     height: 100vh;
+    @include mQ(480px,
+    320px) {
+        height: 90vh;
+    }
     .menu {
         display: flex;
         justify-content: space-between;
@@ -49,6 +66,10 @@ body {
             margin-left: 34px;
             cursor: pointer;
             display: inline-block;
+            @include mQ(480px,
+            320px) {
+                margin-left: 10px;
+            }
             nav.main-nav {
                 height: 100vh;
                 width: 100%;
@@ -81,6 +102,10 @@ body {
         }
         .site-title {
             margin-right: 41px;
+            @include mQ(480px,
+            320px) {
+                margin-right: 10px;
+            }
             h1 {
                 font-weight: 500;
                 color: #6e7680;
@@ -103,6 +128,18 @@ body {
         display: flex;
         align-items: center;
         height: 100%;
+        @include mQ(767px,
+        481px) {
+            padding-left: 15px;
+            height: auto;
+            flex-direction: column;
+        }
+        @include mQ(480px,
+        320px) {
+            padding-left: 15px;
+            height: auto;
+            flex-direction: column;
+        }
         .banner-text {
             font-family: 'Encode Sans';
             font-weight: 500;
@@ -110,17 +147,41 @@ body {
             font-size: 56px;
             line-height: 76px;
             max-width: 531px;
+            @include mQ(480px,
+            320px) {
+                font-size: 32px;
+                line-height: 55px;
+            }
+            @include mQ(767px,
+            481px) {
+                font-size: 37px;
+            }
         }
     }
     .animation-container {
+        width: 100%;
+        @include mQ(480px,
+        320px) {
+            // position: relative;
+            // top: 248px;
+        }
         .thumbs-up {
             position: absolute;
             animation: rocket 3s ease-in-out forwards;
+            @include mQ(480px,
+            320px) {
+                left: 13%;
+                // margin: -20px;
+            }
+            img.mobile {
+                width: 100%;
+            }
             .hand {
                 position: absolute;
                 top: 29%;
                 left: 38%;
                 opacity: 0;
+                width: 58.8059701493%;
                 animation: like 1s 3s ease-in-out forwards;
             }
         }
@@ -142,7 +203,7 @@ body {
 
 @keyframes rocket {
     0% {
-        right: 42%;
+        right: 36%;
         bottom: -24%;
     }
     100% {
@@ -229,6 +290,16 @@ body {
     padding-top: 89px;
     padding-bottom: 104px;
     text-align: center;
+    @include mQ(480px,
+    320px) {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+    @include mQ(767px,
+    481px) {
+        padding-top: 35px;
+        padding-bottom: 60px;
+    }
 }
 
 .text {
@@ -253,11 +324,35 @@ body {
     .details {
         display: flex;
         padding-left: 99px;
+        @include mQ(480px,
+        320px) {
+            padding-left: 15px;
+            flex-direction: column;
+        }
+        @include mQ(767px,
+        481px) {
+            padding-left: 15px;
+            flex-direction: column;
+        }
         .text {
             max-width: 541px;
             padding-right: 120px;
+            @include mQ(480px,
+            320px) {
+                max-width: 100%;
+                padding-right: 15px;
+                padding-bottom: 50px;
+            }
+            @include mQ(767px,
+            481px) {
+                padding-right: 15px;
+            }
             p {
                 padding-bottom: 73px;
+                @include mQ(480px,
+                320px) {
+                    padding-bottom: 50px;
+                }
             }
         }
     }
@@ -265,8 +360,23 @@ body {
         position: relative;
         height: 410px;
         top: 35px;
+        @include mQ(480px,
+        320px) {
+            height: auto;
+            top: 0;
+            margin-right: 10px;
+            margin-bottom: 30px;
+        }
+        @include mQ(767px,
+        481px) {
+            height: auto;
+            top: 0;
+            margin-right: 10px;
+            margin-bottom: 30px;
+        }
         img.cross {
             position: static;
+            width: 100%;
         }
         .brand-builder {
             position: absolute;
@@ -281,6 +391,7 @@ body {
             left: 50%;
             transform: translateX(-50%);
             @include center;
+            // width: 33.82%;
         }
         .well-organized {
             position: absolute;
@@ -342,6 +453,7 @@ nav h6.text-active {
         margin-bottom: 111px;
         margin-left: auto;
         margin-right: auto;
+        flex-wrap: wrap;
     }
     h6 {
         font-family: 'Source Sans Pro';
@@ -366,6 +478,14 @@ nav h6.text-active {
         &:last-child {
             border-right: none;
         }
+        @include mQ(480px,
+        320px) {
+            flex-basis: 150px;
+        }
+        @include mQ(767px,
+        481px) {
+            flex-basis: 150px;
+        }
     }
     .details.active-detail {
         display: flex;
@@ -374,18 +494,58 @@ nav h6.text-active {
         display: flex;
         padding-left: 150px;
         display: none;
+        @include mQ(480px,
+        320px) {
+            padding-left: 15px;
+            flex-direction: column;
+        }
+        @include mQ(767px,
+        481px) {
+            flex-direction: column;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
         .text {
+            order: 2;
             max-width: 397px;
             padding-right: 110px;
+            padding-left: 50px;
+            @include mQ(480px,
+            320px) {
+                padding-right: 10px;
+                padding-left: 0px;
+                max-width: 100%;
+            }
+            @include mQ(767px,
+            481px) {
+                margin-top: 35px;
+                max-width: 100%;
+                padding: 0;
+            }
             h2 {
                 font-family: 'Encode Sans';
                 font-weight: 500;
                 padding-bottom: 42px;
                 font-size: 24px;
                 line-height: 22px;
+                @include mQ(480px,
+                320px) {
+                    text-align: center;
+                    margin-top: 35px;
+                }
+                @include mQ(767px,
+                481px) {
+                    text-align: center;
+                }
             }
             p {
                 padding-bottom: 35px;
+            }
+        }
+        .image {
+            img {
+                width: 100%;
+                order: 1;
             }
         }
     }
@@ -414,6 +574,11 @@ hr {
     .section-heading {
         padding-top: 79px;
         padding-bottom: 84px;
+        @include mQ(480px,
+        320px) {
+            padding-top: 10px;
+            padding-bottom: 45px;
+        }
         p {
             font-size: 32.94px;
             line-height: 61.9px;
@@ -427,6 +592,15 @@ hr {
         align-items: center;
         width: 1048px;
         margin: 0 auto;
+        flex-wrap: wrap;
+        @include mQ(480px,
+        320px) {
+            width: 100%;
+        }
+        @include mQ(767px,
+        481px) {
+            width: 100%;
+        }
         .single-company {
             width: 190px;
             height: 70px;
@@ -437,6 +611,17 @@ hr {
             &:last-child {
                 border-right: none;
             }
+            @include mQ(480px,
+            320px) {
+                width: 155px;
+                border: none;
+            }
+            @include mQ(767px,
+            481px) {
+                width: 155px;
+                border: none;
+                margin-bottom: 35px;
+            }
         }
     }
     hr.long {
@@ -446,21 +631,52 @@ hr {
     .details {
         display: flex;
         padding-left: 177px;
+        @include mQ(480px,
+        320px) {
+            padding-left: 10px;
+            flex-direction: column;
+        }
+        @include mQ(767px,
+        481px) {
+            padding-left: 15px;
+            flex-direction: column;
+        }
     }
     .text {
         max-width: 397px;
         line-height: 24px;
         color: #b4b6ba;
         padding-right: 100px;
+        @include mQ(480px,
+        320px) {
+            padding-right: 10px;
+            max-width: 100%;
+        }
+        @include mQ(767px,
+        481px) {
+            max-width: 100%;
+            padding-right: 10px;
+        }
         p {
             padding-bottom: 33px;
         }
     }
     .image {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         .shape {
             font-family: 'Encode Sans';
             margin-right: 71px;
+            @include mQ(480px,
+            320px) {
+                margin-right: 0px;
+            }
+            @include mQ(767px,
+            481px) {
+                margin-right: 0;
+                margin-bottom: 110px;
+            }
             &:last-child {
                 margin-right: 0px;
             }
@@ -501,42 +717,96 @@ hr {
         justify-content: space-between;
         align-items: center;
         background: #23262a;
+        @include mQ(480px,
+        320px) {
+            flex-direction: column;
+            height: auto;
+            position: relative;
+        }
+        @include mQ(767px,
+        481px) {
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
+            position: static;
+        }
         * {
             margin-top: 10px;
+            @include mQ(480px,
+            320px) {
+                margin-top: 20px;
+            }
         }
         .membership {
             position: relative;
             display: flex;
             padding-left: 100px;
             align-items: center;
-            h3 {
-                position: absolute;
-                top: -41%;
-                font-family: 'Encode Sans';
-                font-weight: 500;
-                font-size: 15px;
-                line-height: 61.9px;
+            @include mQ(480px,
+            320px) {
+                padding-left: 0px;
             }
-            .lahore {
-                padding-right: 38px;
+            @include mQ(767px,
+            481px) {
+                padding-left: 10px;
             }
         }
-        .accreditations {
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding-right: 93px;
-            h3 {
-                position: absolute;
-                top: -68%;
-                left: 4.5%;
-                font-family: 'Encode Sans';
-                font-weight: 500;
-                font-size: 15px;
-                line-height: 61.9px;
+        h3 {
+            position: absolute;
+            top: -41%;
+            font-family: 'Encode Sans';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 61.9px;
+            @include mQ(480px,
+            320px) {
+                top: -30%;
+                width: 100%;
+                text-align: center;
             }
-            img {
-                padding-left: 35px;
+        }
+        .lahore {
+            padding-right: 38px;
+        }
+    }
+    .accreditations {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: 93px;
+        @include mQ(480px,
+        320px) {
+            padding: 0px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        @include mQ(767px,
+        481px) {
+            padding-right: 0px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        h3 {
+            position: absolute;
+            top: -68%;
+            left: 4.5%;
+            font-family: 'Encode Sans';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 61.9px;
+            @include mQ(480px,
+            320px) {
+                top: -20%;
+                left: auto;
+            }
+        }
+        img {
+            padding-left: 35px;
+            @include mQ(480px,
+            320px) {
+                padding-left: 0px;
             }
         }
     }
@@ -568,6 +838,10 @@ hr {
         position: relative;
         bottom: 50px;
         // height: 210px;
+        @include mQ(480px,
+        320px) {
+            bottom: 10px;
+        }
         i.fab {
             position: absolute;
             color: white;
@@ -581,6 +855,7 @@ hr {
             height: 13px;
             animation: bubble 4s 0s ease-in infinite;
             &:hover {
+                -moz-animation-play-state: paused;
                 animation-play-state: paused;
             }
         }
@@ -629,6 +904,10 @@ hr {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        @include mQ(480px,
+        320px) {
+            flex-direction: column;
+        }
     }
     .icons {
         display: flex;
@@ -642,6 +921,11 @@ hr {
             color: #f67e7d;
             font-size: 18px;
             transition: .6s;
+        }
+    }
+    .fb-social-plugin {
+        img {
+            width: 100%;
         }
     }
 }
@@ -673,7 +957,7 @@ $main-color: #fff;
 $secondary-color: #fe5f55;
 // mixins
 @mixin text-hover($main-color: #fff,
-$secondary-color: #fe5f55) {
+$secondary-color: #ecd6d5) {
     display: inline-block;
     color: $main-color;
     text-decoration: none;
@@ -723,17 +1007,4 @@ nav.main-nav a {
 nav.main-nav span {
     @include text-hover(#6d757f,
     white)
-}
-
-@mixin mQ($arg...) {
-    @if length($arg)==1 {
-        @media screen and (max-width: nth($arg, 1)) {
-            @content;
-        }
-    }
-    @if length($arg)==2 {
-        @media screen and (max-width: nth($arg, 1) and (min-width: nth($arg, 2))) {
-            @content;
-        }
-    }
 }
