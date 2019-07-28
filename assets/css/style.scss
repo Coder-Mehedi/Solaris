@@ -99,6 +99,9 @@ body {
                 color: #6e7680;
                 width: 27px;
             }
+            i#hamburger:hover {
+                color: #fff;
+            }
         }
         .site-title {
             margin-right: 41px;
@@ -717,6 +720,12 @@ hr {
             align-items: center;
             flex-direction: column;
             font-weight: 300;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            &:hover {
+                background: #ffffffb0;
+                color: #252526;
+                transition: all .8s;
+            }
         }
     }
     h1.start-project {

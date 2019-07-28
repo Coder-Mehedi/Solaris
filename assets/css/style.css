@@ -184,6 +184,10 @@ body {
   width: 27px;
 }
 
+.menu-and-banner .menu .hamburger i#hamburger:hover {
+  color: #fff;
+}
+
 .menu-and-banner .menu .site-title {
   margin-right: 41px;
 }
@@ -1067,6 +1071,15 @@ hr {
       -ms-flex-direction: column;
           flex-direction: column;
   font-weight: 300;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.clients .image .hexagon-shape:hover {
+  background: #ffffffb0;
+  color: #252526;
+  -webkit-transition: all .8s;
+  transition: all .8s;
 }
 
 .clients h1.start-project {
