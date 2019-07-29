@@ -133,9 +133,9 @@ body {
         height: 100%;
         @include mQ(1024px,
         768px) {
-            padding-left: 15px;
+            padding-left: 40px;
             height: auto;
-            flex-direction: column;
+            margin-top: 80px;
         }
         @include mQ(767px,
         481px) {
@@ -167,7 +167,7 @@ body {
             }
             @include mQ(1024px,
             768px) {
-                max-width: 100%;
+                max-width: 60%;
             }
         }
     }
@@ -238,6 +238,10 @@ body {
     top: 40%;
     right: 3%;
     z-index: 5;
+    @include mQ(480px,
+    320px) {
+        display: none;
+    }
     .circle.active {
         background: #fff;
     }
@@ -333,6 +337,10 @@ body {
     min-height: 782px;
     position: relative;
     z-index: 1;
+    @include mQ(1024px,
+    768px) {
+        min-height: 1024px;
+    }
     .section-heading p {
         font-family: 'Encode Sans';
         font-weight: 500;
@@ -355,6 +363,7 @@ body {
         @include mQ(1024px,
         768px) {
             padding-left: 15px;
+            flex-direction: column;
         }
         .text {
             max-width: 541px;
@@ -372,11 +381,16 @@ body {
             @include mQ(1024px,
             768px) {
                 padding-right: 0px;
+                max-width: 100%;
             }
             p {
                 padding-bottom: 73px;
                 @include mQ(480px,
                 320px) {
+                    padding-bottom: 50px;
+                }
+                @include mQ(1024px,
+                768px) {
                     padding-bottom: 50px;
                 }
             }
@@ -400,6 +414,11 @@ body {
             margin-right: 10px;
             margin-bottom: 30px;
         }
+        @include mQ(1024px,
+        768px) {
+            width: 60%;
+            margin: 0 auto;
+        }
         img.cross {
             position: static;
             width: 100%;
@@ -417,7 +436,10 @@ body {
             left: 50%;
             transform: translateX(-50%);
             @include center;
-            // width: 33.82%;
+            @include mQ(480px,
+            320px) {
+                top: -7%;
+            }
         }
         .well-organized {
             position: absolute;
@@ -438,6 +460,12 @@ body {
             font-size: 17.53px;
             line-height: 26.97px;
             margin-top: 28px;
+            @include mQ(480px,
+            320px) {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 0px;
+            }
         }
     }
     p {
@@ -465,6 +493,10 @@ nav h6.text-active {
 .core-value {
     min-height: 909px;
     background: #1b1d20;
+    @include mQ(1024px,
+    768px) {
+        min-height: 755px;
+    }
     .section-heading {
         p {
             font-family: 'Encode Sans';
@@ -531,8 +563,13 @@ nav h6.text-active {
             padding-left: 10px;
             padding-right: 10px;
         }
+        @include mQ(1024px,
+        768px) {
+            padding-left: 0px;
+            align-items: center;
+        }
         .text {
-            order: 2;
+            // order: 2;
             max-width: 397px;
             padding-right: 110px;
             padding-left: 50px;
@@ -548,6 +585,10 @@ nav h6.text-active {
                 max-width: 100%;
                 padding: 0;
             }
+            @include mQ(1024px,
+            768px) {
+                padding-right: 0px;
+            }
             h2 {
                 font-family: 'Encode Sans';
                 font-weight: 500;
@@ -557,7 +598,6 @@ nav h6.text-active {
                 @include mQ(480px,
                 320px) {
                     text-align: center;
-                    margin-top: 35px;
                 }
                 @include mQ(767px,
                 481px) {
@@ -571,7 +611,7 @@ nav h6.text-active {
         .image {
             img {
                 width: 100%;
-                order: 1;
+                // order: 1;
             }
         }
     }
@@ -597,6 +637,10 @@ hr {
     background-attachment: fixed;
     background-position: 0%;
     background-size: cover;
+    @include mQ(1024px,
+    768px) {
+        min-height: 1366px;
+    }
     .section-heading {
         padding-top: 79px;
         padding-bottom: 84px;
@@ -667,6 +711,10 @@ hr {
             padding-left: 15px;
             flex-direction: column;
         }
+        @include mQ(1024px,
+        768px) {
+            padding-left: 15px;
+        }
     }
     .text {
         max-width: 397px;
@@ -682,6 +730,12 @@ hr {
         481px) {
             max-width: 100%;
             padding-right: 10px;
+        }
+        @include mQ(1024px,
+        768px) {
+            padding-right: 10px;
+            display: flex;
+            @include center();
         }
         p {
             padding-bottom: 33px;
@@ -702,6 +756,10 @@ hr {
             481px) {
                 margin-right: 0;
                 margin-bottom: 110px;
+            }
+            @include mQ(1024px,
+            768px) {
+                margin-right: 0px;
             }
             &:last-child {
                 margin-right: 0px;
@@ -761,11 +819,22 @@ hr {
             position: static;
             padding: 30px 0px;
         }
+        @include mQ(1024px,
+        768px) {
+            height: 295px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
         * {
             margin-top: 10px;
             @include mQ(480px,
             320px) {
                 margin-top: 20px;
+            }
+            @include mQ(1024px,
+            768px) {
+                margin-top: 0%;
             }
         }
         .membership {
@@ -781,6 +850,11 @@ hr {
             481px) {
                 padding-left: 10px;
                 width: 100%;
+            }
+            @include mQ(1024px,
+            768px) {
+                padding-left: 40px;
+                margin-top: 30px;
             }
         }
         h3 {
@@ -801,6 +875,10 @@ hr {
                 top: -30%;
                 width: 100%;
                 text-align: center;
+            }
+            @include mQ(1024px,
+            768px) {
+                top: -50%;
             }
         }
         .lahore {
@@ -870,6 +948,10 @@ hr {
 .social {
     background: #1b1d20;
     min-height: 757px;
+    @include mQ(1024px,
+    768px) {
+        min-height: 570px;
+    }
     .section-heading p {
         font-size: 32.94px;
         line-height: 61.9px;
@@ -916,7 +998,7 @@ hr {
             left: 60%;
             padding: 3px;
             border: 3px solid white;
-            animation: bubble 3s 1s ease-in-out infinite;
+            animation: bubble 5s 1s ease-in-out infinite;
             &:hover {
                 animation-play-state: paused;
             }
@@ -970,6 +1052,10 @@ hr {
         }
     }
     .fb-social-plugin {
+        @include mQ(1024px,
+        768px) {
+            width: 50%;
+        }
         img {
             width: 100%;
         }
